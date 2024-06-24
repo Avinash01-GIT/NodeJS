@@ -1,0 +1,16 @@
+{
+  "name": "binarysearch_npmpkg",
+  "version": "1.0.0",
+  "description": "Binary Search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Algorithm",
+    "Binaty",
+    "Search"
+  ],
+  "author": "avinash",
+  "license": "ISC"
+}
