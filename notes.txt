@@ -1,0 +1,41 @@
+I. Steps to Start a Node.js Project
+1.Open the terminal and navigate to your project folder.
+2.Run the following command to initialize a new Node.js project:
+$ npm init
+
+3.Answer the prompts:
+~Project name: Enter your project name.
+~Version: Press enter to keep the default version.
+~Description: Provide a brief description of your project.
+~Entry point: Enter index.js (or any other file name you prefer as the entry point).
+~Test command: Press enter to skip.
+Git repository: Press enter to skip.
+~Keywords: Leave it empty and press enter.
+~License: Press enter to keep the default license.
+
+4. After answering these questions, a package.json file will be generated inside the folder. This file contains key-value pairs representing your project's metadata.
+
+5 Create the Entry Point File
+Create a new file named index.js (or the name you specified as the entry point) inside your project folder.
+
+6.  Run Your File
+$ node filename
+
+II. Understanding Modules in Node.js
+
+1. What are Modules?
+Modules are a set of functions that you want to include in your application. They help in organizing and structuring your code.
+
+Built-in Modules
+Node.js has a set of built-in modules that you can use without any additional installation. Examples include:
+Readline Module
+File System Module (fs)
+Path Module
+For more built-in modules, refer to the Node.js documentation.
+
+Including a Module in Your Application
+To include a module in your application, use the require function. Here’s the syntax for including the File System (fs) module:
+ const fs = require('fs');
+
+III. Web Scrapping
+
