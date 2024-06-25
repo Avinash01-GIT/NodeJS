@@ -37,5 +37,25 @@ Including a Module in Your Application
 To include a module in your application, use the require function. Here’s the syntax for including the File System (fs) module:
  const fs = require('fs');
 
-III. Web Scrapping
+III. npm package
+"npm," short for Node Package Manager, is used to install packages (code written by other developers) to simplify our work. I can also publish a package on the npm website.
 
+To publish a package on the npm website, you must create an account. Here are the steps:
+
+Create a folder on your local system.
+Open the terminal and run the command npm init.
+This will create a package.json file.
+Create a file named index.js and write your code logic.
+In the terminal, run npm publish to publish your package.
+
+IV. Web Scraping
+Web scraping, also known as web harvesting or web data extraction, is a very useful process used to gather content and data from the internet. This data is often stored in a local file so it can be processed & analyzed later. This is exactly what web scraping is (but in a very small scale since you have likely tried to copy and paste content from a website into an excel sheet).
+
+Nonetheless, when people talk of “web scrapers,” they typically mean software applications. Web scraping applications (bots) are programmed to visit sites, extract the pages, and retrieve the requested data. This enables these bots to pull vast amounts of data in a matter of seconds from this website itself.
+
+web Scraping used for
+1.Price Monitoring
+2.Market Research
+3.News Monitoring
+4.Sentiment Analysis
+5. Email Marketing
