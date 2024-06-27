@@ -9,6 +9,8 @@
   "author": "avinash",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.7.2"
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12",
+    "xlsx": "^0.18.5"
   }
 }
