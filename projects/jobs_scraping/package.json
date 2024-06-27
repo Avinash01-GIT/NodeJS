@@ -1,5 +1,5 @@
 {
-  "name": "naukri_scraping",
+  "name": "jobs_scraping",
   "version": "1.0.0",
   "description": "naukri website web scraping",
   "main": "index.js",
