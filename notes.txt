@@ -59,3 +59,53 @@ web Scraping used for
 3.News Monitoring
 4.Sentiment Analysis
 5. Email Marketing
+
+V. Server Builnding
+
+1. What is a Server?
+backend is a logical code running on the server 
+ A Server is simply a computer that listens for incomming requests.
+ Any computer that is connected to a network can act as an Server
+ where does the requestes go?
+ The requestes made by the Server goes to the back-end.
+  Back-end
+ The back-end is the technology required to process the incoming requeste and genrate and send the response to the Client.
+  Client?
+ The Client are anything that sends requestes to the back-end.
+  They are often browsers that make requests for the HTML and JavaScript code that they will execute to display websites
+  to the users.
+   HTTP?
+The Internet is a massive distributed Client/Server information system
+Many applications are running concurrently over the Web, such as web browsing/surfing, e-mail, file transfer, audio & video streaming etc..
+In order for proper communication to take place between the client and the server, these applications must agree on a specific application level protocol such as HTTP, FTP, SMTP, POP, and etc.
+
+
+Building a Server with Node.js
+In Node.js, we use the 'http' module to create servers. The server's job is to handle requests and send responses.
+
+Server Functions
+Requests and Responses: Every time a server is created using Node.js, it needs to open a specific port. This port is where it listens for incoming requests and sends responses back out.
+
+Role of Server Software: Software such as Apache, Nginx, Tomcat, Glassfish, etc., turn a regular computer into a powerful server. Node.js, on the other hand, uses its 'http' module for similar purposes.
+
+Purpose of Server Software
+These server softwares (like Apache, Nginx, etc.) primarily serve two functions:
+
+Handle Requests: They receive requests that come in through specific ports.
+Send Responses: They then send back appropriate responses based on those requests.
+
+
+127.0.0.1 => Pc Ip address
+localhost => domain of PC 
+End point => API url is also called endpoint
+A Requests and Responses both has two parts 
+Header and body
+Header of any api represents meta data => basic information of your API
+Body stores the actual data
+
+ CavemanServerBuilding
+ has a index.js file 
+ This file contains some dummy APIs, and this code cannot be used when the size of the projects increases. It will get muddled up, readability will decrease, and complexity will increase.
+
+ExpressJs
+
