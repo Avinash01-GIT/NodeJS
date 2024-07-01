@@ -107,5 +107,16 @@ Body stores the actual data
  has a index.js file (http module)
  This file contains some dummy APIs, and this code cannot be used when the size of the projects increases. It will get muddled up, readability will decrease, and complexity will increase.
 
-ExpressJs
+ExpressJs middleware
+Express.js is a minimal and flexible Node.js web application framework that provides robust features for building web and mobile applications. It simplifies the process of creating server-side applications by offering various HTTP utility methods and middleware, allowing developers to create robust APIs and web servers quickly. Express.js enables the handling of routing, middleware, and rendering of dynamic content, making it a popular choice for building single-page, multi-page, and hybrid web applications.
+
+In the folder middleware (index.js), a list of users is defined. The middleware function m1 checks for an apikey query parameter with the value "office101". If the API key is correct, it allows the request to proceed; otherwise, it responds with a 403 status and an error message.
+
+The middleware is applied globally using app.use(apiKeyMiddleware), ensuring all requests pass through this check. The /user endpoint handles GET requests and checks for a userId query parameter. If no userId is provided, it returns the full list of users. If a userId is provided but no matching user is found, it sends a 404 status response. If a matching user is found, it returns the user details.
+
+The server listens on port 10000, and the URLs ( 
+http://localhost:10000/user?apikey=office101
+or
+http://localhost:10000/user?apikey=office101&userId=1
+) demonstrate how to request all users or a specific user by userId with the required apikey.
 
