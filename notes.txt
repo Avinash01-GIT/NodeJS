@@ -104,7 +104,7 @@ Header of any api represents meta data => basic information of your API
 Body stores the actual data
 
  CavemanServerBuilding
- has a index.js file 
+ has a index.js file (http module)
  This file contains some dummy APIs, and this code cannot be used when the size of the projects increases. It will get muddled up, readability will decrease, and complexity will increase.
 
 ExpressJs

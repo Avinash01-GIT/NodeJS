@@ -1,0 +1,19 @@
+{
+  "name": "serverusingexpressjs",
+  "version": "1.0.0",
+  "description": "A server using ExpressJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ExpressJs",
+    "Server"
+  ],
+  "author": "avinash",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
