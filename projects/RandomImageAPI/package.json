@@ -1,0 +1,21 @@
+{
+  "name": "randomimageapi",
+  "version": "1.0.0",
+  "description": "random images API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "Node",
+    "API",
+    "Images"
+  ],
+  "author": "avinash",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
