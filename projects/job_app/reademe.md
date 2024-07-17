@@ -37,4 +37,6 @@ example:
   }
 }
 
-to connect node with monoDB we use mongoose
+to connect node with monoDB we use mongoose,
+in index.js file we will connect to database 
+in model jobs.js we will declare and connect the collection name "jobs" in the data base and fields (JobSchema)  

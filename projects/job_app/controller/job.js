@@ -2,14 +2,14 @@ const JobModel = require("../model/job");
 
 const createJob = async (req, res) => {
   try {
-    // console.log(req.body);
-    const newlyInsertedJob = await JobModel.create(req.body);
+    const newlyInsertedJob = await JobModel.create(req.body); // to save the data in db
     console.log(newlyInsertedJob);
     res.json({
       success: true,
       message: "job created sucessfully",
     });
-  } catch (err) {
+  } catch (error) {
+    console.log(error);
     res.json({
       success: false,
       message: "Somthing went wrong please try again after sometime!",
@@ -18,39 +18,72 @@ const createJob = async (req, res) => {
 };
 
 const listJob = async (req, res) => {
+  const jobList = await JobModel.find();
+  res.json({
+    status: true,
+    message: "Job List",
+    results: jobList,
+  });
+};
+
+const updateJob = async (req, res) => {
   try {
-    let query = {}; 
-    if (req.query.minSalary) {
-      const minSalary = Number(req.query.minSalary);
-      query = { salary: { $gt: minSalary } };
+    console.log(req.params.id);
+    const id = req.params.id;
+    const update = {
+      $set: req.body,
+    };
+
+    const updatedJob = await JobModel.findByIdAndUpdate(id, update, {
+      new: true,
+    }); // Add { new: true } to return the updated document
+
+    if (!updatedJob) {
+      return res.status(404).json({
+        success: false,
+        message: "Job not found!",
+      });
     }
-    const jobList = await JobModel.find(query);
+
     res.json({
       success: true,
-      message: "Job List API",
-      result: jobList,
+      message: "Job Updated Successfully!",
+      data: updatedJob,
     });
   } catch (error) {
+    console.log(error);
     res.status(500).json({
       success: false,
-      message: "Error retrieving job list",
-      error: error.message,
+      message: "Something went wrong, please try again later!",
     });
   }
 };
 
-const updateJob = (req, res) => {
-  res.json({
-    success: true,
-    message: "update job api",
-  });
-};
+const deleteJob = async (req, res) => {
+  try {
+    console.log(req.params);
+    const id = req.params.id;
+    const deletedJob = await JobModel.findByIdAndDelete(id);
 
-const deleteJob = (req, res) => {
-  res.json({
-    success: true,
-    message: "delete job api",
-  });
+    if (!deletedJob) {
+      return res.status(404).json({
+        success: false,
+        message: "Job not found!",
+      });
+    }
+
+    res.json({
+      success: true,
+      message: "Job Deleted Successfully!",
+    });
+    console.log(id, "Delete this job id");
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      success: false,
+      message: "Something went wrong, please try again later!",
+    });
+  }
 };
 
 const jobController = {

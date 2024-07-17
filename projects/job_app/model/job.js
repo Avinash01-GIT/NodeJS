@@ -21,8 +21,8 @@ const jobSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-});
+}); // collections fields
 
-const JobSchema = mongoose.model("jobs", jobSchema);
+const JobSchema = mongoose.model("jobs", jobSchema); // "jobs" collection name
 
-module.exports = JobSchema;
+module.exports = JobSchema; // will be used in controller as JobModel
